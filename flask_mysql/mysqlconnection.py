@@ -1,7 +1,7 @@
 """ import the necessary modules """
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.sql import text
-# Create a class that will give us an object that we can use to connect to a databasecopy
+# Create a class that will give us an object that we can use to connect to a database
 class MySQLConnection(object):
     def __init__(self, app, db):
         config = {
@@ -37,4 +37,4 @@ class MySQLConnection(object):
             self.db.session.commit()
 # This is the module method to be called by the user in server.py. Make sure to provide the db name!
 def MySQLConnector(app, db):
-    return MySQLConnection(app, 
+    return MySQLConnection(app, db)
