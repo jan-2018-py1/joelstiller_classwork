@@ -1,0 +1,14 @@
+<html>
+<head>
+  <title>Success Page</title>
+</head>
+<body>
+  <h1>The email address you entered {{entered}} is a VALID email address! Thank you!</h1>
+<br>
+<br>
+<h2>Email Addresses Entered</h2>
+{% for email in emails %}
+   <p>{{ email['email'] }}    {{email['created_at']}} <form action="/delete/{{email['id']}}"><input type="submit" value="delete this"></form></p>
+{% endfor %}
+</body>
+</html>
